@@ -1,11 +1,8 @@
 import React from 'react';
+import { StandartTableExample } from '../src/ui/organisms/StandartTableExample';
 
 const App: React.FC = () => {
-  return (
-    <div className="App">
-      <a></a>
-    </div>
-  );
+  return <StandartTableExample />;
 };
 
 export default App;
