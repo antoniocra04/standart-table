@@ -14,6 +14,10 @@ export interface IStandartTableDataSource {
 }
 
 export interface IStandartTableAdditionalConfig {
-  onClickDeleteButton?: () => void;
-  onClickEditButtion?: () => void;
+  deleteButton?: IAdditionalConfigButton;
+  editButton?: IAdditionalConfigButton;
+}
+
+export interface IAdditionalConfigButton {
+  onClick: () => void;
 }

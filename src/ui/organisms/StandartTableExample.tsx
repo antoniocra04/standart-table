@@ -66,8 +66,8 @@ const columns = [
 ];
 
 const additionalConfig = {
-  onClickEditButtion: () => console.log('edit'),
-  onClickDeleteButton: () => console.log('delete'),
+  editButton: { onClick: () => console.log('edit') },
+  deleteButton: { onClick: () => console.log('delete') },
 };
 
 export const StandartTableExample: React.FC = () => {

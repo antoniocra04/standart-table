@@ -10,16 +10,16 @@ export const generateAdditionalSetup = (config: IStandartTableAdditionalConfig |
       key: 'action',
       render: () => (
         <Space size="middle">
-          {config.onClickEditButtion ? (
-            <Button type="primary" onClick={config.onClickEditButtion}>
+          {config.editButton ? (
+            <Button type="primary" onClick={config.editButton.onClick}>
               Edit
             </Button>
           ) : (
             ''
           )}
 
-          {config.onClickDeleteButton ? (
-            <Button type="primary" danger onClick={config.onClickDeleteButton}>
+          {config.deleteButton ? (
+            <Button type="primary" danger onClick={config.deleteButton.onClick}>
               Delete
             </Button>
           ) : (
