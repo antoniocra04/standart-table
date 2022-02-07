@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tag, Space } from 'antd';
+import { Tag } from 'antd';
 import { StandartTable } from '../molecules/StandartTable';
 
 const data = [
@@ -63,17 +63,13 @@ const columns = [
       </>
     ),
   },
-  {
-    title: 'Action',
-    key: 'action',
-    render: () => (
-      <Space size="middle">
-        <a>Delete</a>
-      </Space>
-    ),
-  },
 ];
 
+const additionalConfig = {
+  onClickEditButtion: () => console.log('edit'),
+  onClickDeleteButton: () => console.log('delete'),
+};
+
 export const StandartTableExample: React.FC = () => {
-  return <StandartTable dataSource={data} columns={columns} />;
+  return <StandartTable dataSource={data} columns={columns} additionalConfig={additionalConfig} />;
 };
